@@ -1,6 +1,7 @@
 on:
   schedule:
     - cron: "57 23 * * *"
+  workflow_dispatch:
 
 jobs:
   upload:
