@@ -58,19 +58,19 @@ def authenticate():
 	return build("youtube", "v3", credentials=creds)
 
 vertices = np.array([
-	[-1, -1, -1],  # base corner 0
-	[ 1, -1, -1],  # base corner 1
-	[ 1, -1,  1],  # base corner 2
-	[-1, -1,  1],  # base corner 3
-	[ 0,  1,  0]   # apex
+	[-1, -1, -1],
+	[ 1, -1, -1],
+	[ 1, -1,  1],
+	[-1, -1,  1],
+	[ 0,  1,  0]
 ])
 
 faces = [
-	(0,1,2,3),  # base
-	(0,1,4),    # side 1
-	(1,2,4),    # side 2
-	(2,3,4),    # side 3
-	(3,0,4)     # side 4
+	(0,1,2,3),
+	(0,1,4),
+	(1,2,4),
+	(2,3,4),
+	(3,0,4)
 ]
 
 colors = [
@@ -154,9 +154,8 @@ def upl():
 	try:
 		generate_video()
 		upload_video()
-		os.remove(title)
-	except:
-		os.remove(title);
+	except Exception as e:
+		print(e)
 
 if __name__ == "__main__":
 	upl()
