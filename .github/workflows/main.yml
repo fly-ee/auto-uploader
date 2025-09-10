@@ -16,7 +16,7 @@ jobs:
 
       - name: install som dependencies
         run: |
-          pip install pillow numpy ffmpeg-python google-auth google-auth-oauthlib google-api-python-client
+          pip install pillow numpy ffmpeg ffmpeg-python google-auth google-auth-oauthlib google-api-python-client
 
       - name: restore creds
         run: |
